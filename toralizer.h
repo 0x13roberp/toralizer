@@ -15,6 +15,9 @@
 // ip address
 #define PROXY "127.0.0.1"
 #define PROXYPORT 9050
+#define REQSIZE sizeof(struct proxy_request)
+#define RESPSIZE sizeof(struct proxy_response)
+#define USERNAME "toraliz"
 
 // https://www.openssh.com/txt/socks4.protocol
 
@@ -41,3 +44,5 @@ struct proxy_response {
 typedef struct proxy_request Req;
 typedef struct proxy_response Res;
 
+Req *request(const char*, const int);
+int main(int, char**);
